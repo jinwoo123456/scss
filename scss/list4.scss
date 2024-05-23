@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+$heading: base #000 45px 300, sm #000 35px 300; //리스트형 변수는 2개 이상
+
+@each $class, $color, $fontsize, $fontweight in $heading {
+  .heading-#{$class} {
+    color: $color;
+    font-size: $fontsize;
+    $font-weight: $fontweight;
+  }
+}
+
+// .heading {
+//   $black: #000;
+
+//   color: $black;
+//   font-size: 22px;
+//   font-weight: 700;
+//  //<<  css 형태
+
+$circle: base 44px #fff #6c62f1 20px, sm 40px #fff #6c62f1 18px;
+
+@each $class, $size, $color, $bgcolor, $fontsize in $circle {
+  .circle-#{$class} {
+    width: $size;
+    color: $color;
+    background-color: $bgcolor;
+    font-size: $fontsize;
+  }
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 100%;
+  aspect-ratio: 1;
+}
+
+//믹스인//
+@mixin fontType1 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.88px;
+} //밑에거 믹스인으로 만들기
+
+.fontType1 {
+  @include fontType1;
+}
+
+.list-type4 {
+  @include fontType1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 21px;
+  li {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid #6c62f1;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+$margintop: (22, 20);
+
+@each $item in $margintop {
+  .mt#{$item} {
+    margin-top: $item + px;
+  }
+}

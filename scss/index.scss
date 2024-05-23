@@ -1,0 +1,7 @@
+// @import url(); //css 문법
+// @import ""; //scss문법
+//css 경로 기준으로 연결 (../ ./ /)
+@import "./var"; //변수
+@import "./dataType"; //데이터타입
+@import "./nesting"; //네스팅
+@import "./mixin";

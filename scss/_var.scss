@@ -1,0 +1,33 @@
+// $이름:값; //기본 정의
+
+$fs12: 12px;
+$fs20: $fs12; //재할당의 재할당 (기능 안 헷갈리게 이름 바꾸기)
+$imgurl: "../images/"; //변수 호출용 #{$imgurl}로 쓰기
+// 클래스,속성,값이 연속될 때  #{변수이름}으로 사용.(문자 보간)
+// 변수는 모든 곳에서 사용 가능
+// const a= "text";
+// const b = '문자사이의 다른 변수를 $()넣을때
+
+div {
+  $color: red; //지역변수(이 안에서만 가능)
+  font-size: $fs12;
+  padding: $fs20;
+  color: $color;
+}
+p {
+  $fs12: 15px; //scss는 재정의 가능(자바스크립트 let)
+  font-size: $fs12;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background: url(#{$imgurl}dog.jpg) no-repeat center;
+}
+$class: ".box"; //클래스 정의 #{$class}로 표현
+$w: "width";
+#{$class} {
+  #{$w}: 100px;
+  height: 100px;
+  border: 2px solid red;
+}

@@ -1,0 +1,37 @@
+//배경 이미지 넣기
+
+// @mixin background(매개변수) { background: url(경로/파일명) no-repeat; } //문법
+
+// @mixin background($img, $x, $y) {
+//   background: url(#{$imgurl}/#{$img}) no-repeat $x $y;
+// }
+@mixin background($img, $codinate) {
+  background: url(#{$imgurl}/#{$img}) no-repeat $codinate;
+} //위에랑 똑같은 뜻 (x,y 합친게 codinate) codinate는 작명임
+
+.mixin {
+  @include background("dog.jpg", 10px, 20px); //믹스인 실행문
+}
+
+.icon {
+  @include background("icon.svg", center, right);
+}
+
+//선 그리는 믹스인
+
+@mixin border($borderwidth: 1px, $borderColor: #000, $hovercolor: red) {
+  // : #000, : 1px은 기본값 설정
+  border: $borderwidth solid $borderColor;
+  &:hover {
+    border-color: $hovercolor;
+  }
+  &:focus {
+  }
+}
+
+.box {
+  @include border(1px, red, pink);
+}
+.box2 {
+  @include border();
+}

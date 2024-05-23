@@ -1,0 +1,22 @@
+/* Error: Only 2 arguments allowed, but 3 were passed.
+ *     ,
+ * 8   | @mixin background($img, $codinate) {
+ *     |        =========================== declaration
+ * ... |
+ * 13  |   @include background("dog.jpg", 10px, 20px); //믹스인 실행문
+ *     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *     '
+ *   scss\_mixin.scss 13:3  background()
+ *   scss\_mixin.scss 13:3  @import
+ *   scss\index.scss 7:9    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Only 2 arguments allowed, but 3 were passed.\a     \2577 \a 8   \2502  @mixin background($img, $codinate) {\d\a     \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a... \2502 \a 13  \2502    @include background("dog.jpg", 10px, 20px); //\bbf9 \c2a4 \c778  \c2e4 \d589 \bb38 \d\a     \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a     \2575 \a   scss\\_mixin.scss 13:3  background()\a   scss\\_mixin.scss 13:3  @import\a   scss\\index.scss 7:9    root stylesheet';
+}

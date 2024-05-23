@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.heading-base {
+  color: #000;
+  font-size: 45px;
+}
+
+.heading-sm {
+  color: #000;
+  font-size: 35px;
+}
+
+.circle-base {
+  width: 44px;
+  color: #fff;
+  background-color: #6c62f1;
+  font-size: 20px;
+}
+
+.circle-sm {
+  width: 40px;
+  color: #fff;
+  background-color: #6c62f1;
+  font-size: 18px;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 100%;
+  aspect-ratio: 1;
+}
+
+.fontType1 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.88px;
+}
+
+.list-type4 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.88px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 21px;
+}
+.list-type4 li {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: 1px solid #6c62f1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt22 {
+  margin-top: 22px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=list4.css.map */
